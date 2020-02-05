@@ -1,0 +1,134 @@
+h1 {
+    font-family: Arial;
+    color: white;
+    user-select: none;
+}
+.smoler {
+  font-size: 20px;
+}
+h2 {
+  font-family: Arial;
+  color: white;
+  user-select: none;
+}
+#doggo {
+    background-color: black;
+    border: 10px solid black;
+    width: 73%;
+    height: 73%; 
+    user-select: none;
+  }
+html {
+    background-color: black;
+  }
+ #clickbox {
+  max-width: 370px;
+  max-height: 370px;
+  position: absolute;
+  }
+  #myProgress {
+    width: 340px;
+    background-color: #ddd;
+    position: absolute;
+    top: 460px; left: 40px;
+    padding-top: 5px;
+  }
+  
+  #expBar {
+    width: 0%;
+    max-width: 100%;
+    height: 30px;
+    background-color: #4CAF50;
+    top: 460px; left: 40px;
+  }
+  #exptogo {
+    font-family: Arial;
+    color: white;
+    position: absolute;
+    top: 475px; left: 40px;
+    font-size: 20px;
+    user-select: none;
+  }
+  #firstrow #firsty button {
+    min-block-size: 50px;
+    width: 150px;
+    max-width: 150px;
+    background-color: #EEEADB;
+    border: 5px solid #E2CAA0;
+  }
+  #firstrow {
+    display: table-row;
+    position: absolute;
+    left: 460px;
+  }
+  #secondrow {
+    display: table-row;
+    position: relative;
+    left: 460px;
+  }
+  img {
+    cursor:pointer;
+  }
+  footer {
+    position: relative;
+    Top: 420px;
+    padding-left: 32px;
+  }
+  button {
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+  #dpsShow {
+    color: white;
+    font-family: Arial;
+    user-select: none;
+  }
+   ul {
+    list-style-type: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    }
+     ul li {
+    display: inline-block;
+    border-right: 2px solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: none;
+    padding-bottom: none;
+    }
+     ul li:last-child {
+    border-right: none;
+     }
+     #rubies {
+       color: rgb(233, 119, 119);
+     }
+     #doggos {
+       color: rgb(178, 178, 247);
+     }
+
+.dropdown:hover .dropdown-content {display: block; padding-left: 5px;font-size: 12px;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
