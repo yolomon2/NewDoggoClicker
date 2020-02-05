@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Doggo Clicker</title>
+        <link href="css/doggo.css" rel="stylesheet"/>
+        <script type="text/javascript" src="js/myscript.js"></script>
+        <audio id="myAudio">
+            <source src="js/sounds/Zelda & Chill.mp3" type="audio/mpeg">
+          </audio>
+          <header>
+              <ul>
+                <div class= "dropdown">
+                    <li><h1 id ="doggos">0 Doggos</h1></li>
+                  <div class="dropdown-content">
+                    <p>The main currency. Is used with most purchases in the game. Obtained from Dps and tapping doggos.</b></p>
+                  </div>
+                </div>
+                <div class="dropdown">
+                    <li><h1 id ="rubies">0 Rubies</h1></li>
+                    <div class = "dropdown-content">
+                      <p>The secondary currency. It is obtained from leveling up. It can be used to purchase new doggos, prestige and upgrade <b>Dpc</b>.</p>
+                    </div>
+                </div>
+            <div class="dropdown">
+                <li><h1 class = "smoler" id ="dpsShow">0 Dps</h1></li>
+                <div class ="dropdown-content">
+                  <p>Doggos per second/how many doggos you earn each second. It can be increased by purchases with <span style="color: rgb(178, 178, 247)">doggos.</span></p>
+                </div>
+            </div>
+            <div class="dropdown">
+              <li><h1 class = "smoler" id ="dpc">1 Dpc</h1></li>
+            <div class="dropdown-content">
+              <p>Doggos per click/how many doggos you get per click. It can be upgraded using <span style="color: rgb(233, 119, 119)">rubies.</span></p>
+            </div>
+          </div>
+              </ul>
+            </header>
+    </head>
+    <body onmouseup="mouseUp()">
+        <div>
+        <div onmousedown="mouseDown()" id="clickbox">
+         <img id="doggo" onmouseout='mouseOut()' src="images/doggo_mainA.png"/>
+                <script>
+                    document.getElementById("doggo").onclick = function() {pro(), click()};
+                    
+                    function mouseDown() {
+                       document.getElementById("doggo").style.width= '72%';
+                       document.getElementById("doggo").style.height= '72%';
+                   }
+                   function mouseUp() {
+                       document.getElementById("doggo").style.width= '73%';
+                       document.getElementById("doggo").style.height= '73%';
+                   }
+                   function mouseOut() {
+                       document.getElementById('doggo').style.width= '73%';
+                       document.getElementById('doggo').style.height= '73%';
+                   }
+                </script>
+        </div>
+        <div id="myProgress">
+                <div id="expBar"></div>
+              </div>
+              <p id='exptogo'></p>
+              <div>
+                  <table id = 'firstrow'>
+                  <tr id="firsty">
+                      <td><button onclick="DoggoKing.buy()" id ="DoggoKing">DoggoKing(0) 300</button></td>
+                      <td><button onclick="WiseDoggoKing.buy()" id ="WiseDoggoKing">WiseDoggoKing(0) 3K</button></td>
+                      <td><button onclick="DoggoKingLord.buy()" id ="DoggoKingLord">DoggoKingLord(0) 15K</button></td>
+                  </tr>
+                  <tr id="firsty">
+                      <td><button onclick="DoggoMage.buy()" id ="DoggoMage">DoggoMage(0) 70K</button></td>
+                      <td><button onclick="DoggoSage.buy()" id ="DoggoSage">DoggoSage(0) 400K</button></td>
+                      <td><button onclick="DoggoSorcerer.buy()" id="DoggoSorcerer">DoggoSorcerer(0) 2M</button></td>
+                  </tr>
+                  <tr id ='secondrow'>
+                      <td><button onclick="clickBoosterSmol.buy()" id ="clickBoosterSmol" class="rubyPurchase">+5 Dpc (10 Rubies)</button></td>
+                      <td><button onclick="clickBoosterMed.buy()" id ="clickBoosterMed" class="rubyPurchase"></button></td>
+                      <td><button onclick="clickBoosterLarg.buy()" id="clickBoosterLarg" class="rubyPurchase"></button></td>
+                  </tr>
+                  </table>
+              </div>
+              </div>
+            </body>
+              <footer>
+              <button  id="jazz" onclick="playAudio()" class="button" style="vertical-align:middle"><span>Play Some Jazz</span></button>
+            <button id="jazz" onclick="pauseAudio()" class="button" style="vertical-align: middle"><span>No More Jazz</span></button> 
+              </br><button id="newg" onclick="newGame()" class="loadsave" style="vertical-align: middle">New Game</button>
+            <button id="loadsave" onclick="loadSave()" class = "loadsave" style="vertical-align: middle">Load Save</button>
+            <button id="savegame" onclick="saveGame()" class = "loadsave" style="vertical-align: middle">Save Game</button>            
+            <style>
+                .rubyPurchase {
+                  min-block-size: 50px;
+                  width: 150px;
+                  max-width: 150px;
+                  background-color: rgb(235, 173, 173);
+                  border: 5px solid rgb(233, 119, 119);
+                }
+                .button {
+                  display: inline-block;
+                  border-radius: 4px;
+                  background-color: #f4511e;
+                  border: none;
+                  color: #FFFFFF;
+                  text-align: center;
+                  font-size: 20px;
+                  padding: 20px;
+                  block-size: 55px;
+                  transition: all 0.5s;
+                  cursor: pointer;
+
+                }
+                .loadsave {
+                display: inline-block;
+                  border-radius: 4px;
+                  background-color: #51cc51;
+                  border: none;
+                  color: #FFFFFF;
+                  text-align: center;
+                  font-size: 20px;
+                  padding: 20px;
+                  block-size: 55px;
+                  margin-top: 5px;
+                  cursor: pointer;
+                }
+                
+                .button span {
+                  cursor: pointer;
+                  display: inline-block;
+                  position: relative;
+                  transition: 0.5s;
+                }
+                
+                .button span:after {
+                  content: '\00bb';
+                  position: absolute;
+                  opacity: 0;
+                  right: -20px;
+                  transition: 0.5s;
+                  max-block-size: 60px;
+                }
+                
+                .button:active span {
+                  padding-right: 25px;
+                  max-block-size: 60px;
+                }
+                
+                .button:active span:after {
+                  opacity: 1;
+                  right: 0;
+                  max-block-size: 60px;
+                }
+                </style>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
+</footer>
+</html>
